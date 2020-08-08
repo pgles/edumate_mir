@@ -1,26 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {compose} from 'recompose';
+import { withFirebase } from './firebase/withFirebase';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Main from './Components/Main';
+import { Firebase } from './firebase';
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" render={() => <Main firebase={Firebase} />}/>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
-export default App;
+export default compose(
+  withFirebase
+  //connect redux store here
+)(App);

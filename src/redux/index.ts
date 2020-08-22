@@ -1,2 +1,4 @@
-export { store } from './ConfigureStore';
-export { exampleAction } from './ActionCreators';
+export { ConfigureStore } from './ConfigureStore';
+export { exampleAction,receiveLogin,requestLogin,loginError } from './ActionCreators';
+export { fetchUser } from './ActionCreators';
+    

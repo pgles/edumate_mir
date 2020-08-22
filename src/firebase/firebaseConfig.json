@@ -1,9 +1,9 @@
 {
-    "apiKey": "",
-    "authDomain": "",
-    "databaseURL": "",
-    "projectId": "",
-    "storageBucket": "",
-    "messagingSenderId": "",
-    "appId": ""
-}
+    "apiKey": "AIzaSyCGputcE-SdUVNaWzi3w_F2oUuV-QpwmuU",
+    "authDomain": "mpfirebaseproject-7ff28.firebaseapp.com",
+    "databaseURL": "https://mpfirebaseproject-7ff28.firebaseio.com",
+    "projectId": "mpfirebaseproject-7ff28",
+    "storageBucket": "mpfirebaseproject-7ff28.appspot.com",
+    "messagingSenderId": "55281444976",
+    "appId": "1:55281444976:web:c70350a704a3505e59ecb5"
+  }

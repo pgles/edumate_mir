@@ -2,11 +2,11 @@ import {createStore,combineReducers,applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import { User } from './reducers/user';
 
-export const store = () =>{
+export const ConfigureStore = () => {
     const store = createStore(combineReducers({
-        user: User
+        user:User,
     }),
     applyMiddleware(thunk)
     );
     return store;
-}
+};

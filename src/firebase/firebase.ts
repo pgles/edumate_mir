@@ -8,6 +8,7 @@ require('firebase/database');
 require('firebase/storage');
 
 export class Firebase {
+    [x: string]: any;
 	auth: app.auth.Auth;
 	db: app.firestore.Firestore;
 	rtdb: app.database.Database;
@@ -22,6 +23,9 @@ export class Firebase {
 		this.auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
 	}
 	// Firebase functions maybe written here and accessed from within the app.
+	doSignInWithEmailAndPassword = async (email: string, password: string) =>
+		await this.auth.signInWithEmailAndPassword(email, password);
+
 }
 
 export const FirebaseContext = React.createContext<Firebase | null>(null);
